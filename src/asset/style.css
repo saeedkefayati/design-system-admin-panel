@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("./font/Vazirmatn[wght].woff2") format("woff2 supports variations"),
+    url("./font/Vazirmatn[wght].woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter var";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("./font/Inter.var.woff2") format("woff2 supports variations"),
+    url("./font/Inter.var.woff2") format("woff2-variations");
+}
+
+* {
+  user-select: none !important;
+}
+
+*[dir="rtl"] {
+  font-family: "Vazirmatn", sans-serif;
+}
+
+*[dir="ltr"] {
+  font-family: "Inter var", sans-serif;
+}
+
+[dir="rtl"] body {
+  font-feature-settings: "ss01";
+}
+
+a {
+  text-decoration: none;
+}
+
+.rsm-svg *:focus {
+  outline: none;
+}
+
+/* apex chart custom class */
+[dir="rtl"] .apexcharts-title-text {
+  text-anchor: end;
+}
+[dir="rtl"] .apexcharts-xaxis text tspan {
+  text-anchor: middle;
+}
+[dir="rtl"] .apexcharts-yaxis text tspan {
+  text-anchor: start;
+}
+/* apex chart custom class */
+
+.pulse {
+  transform-origin: 50% 50%;
+  animation-duration: 2s;
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  from {
+    stroke-width: 3px;
+    stroke-opacity: 1;
+    transform: scale(0.3);
+  }
+  to {
+    stroke-width: 0;
+    stroke-opacity: 0;
+    transform: scale(2.5);
+  }
+}

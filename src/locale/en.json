@@ -1,0 +1,60 @@
+{
+  "seo": {
+    "title": "Hello World!",
+    "not-found": "Not Found",
+    "dashboard": "Dashboard",
+    "error": "Something Went Wrong!",
+    "forget-password": "Forget Password",
+    "login": "Login"
+  },
+  "login": {
+    "title": "Hello World!",
+    "email": "Email Address",
+    "password": "Your Password",
+    "forget-password": "Forget Your Password?",
+    "submit": "Login",
+    "language": "Choose Your Language"
+  },
+  "forget-password": {
+    "title": "Forgot your password?",
+    "sub-title": "Enter Your Email To Get A Reset Link.",
+    "email": "Email Address",
+    "reset-password": "Change Password",
+    "back": "Back To Login Page"
+  },
+  "home": {
+    "title": "Home",
+    "information": "Your Information",
+    "device": "Your Device",
+    "client": "Compatible Program Link",
+    "network": "Network Status",
+    "online": "Online",
+    "offline": "Offline",
+    "location": "Location",
+    "account-info": "Your Data Usage",
+    "metric": "GB",
+    "subscription": "Your Subscription Link",
+    "available": "Available",
+    "not-available": "Not Available",
+    "charge": "You Need To Charge Your Account",
+    "logout": "Logout",
+    "copy": "copy",
+    "copied": "copied"
+  },
+  "chart": {
+    "title": "Chart"
+  },
+  "menu": {
+    "dashboard": "Dashboard",
+    "login": "Login",
+    "forget-password": "Forget Password",
+    "not-found": "Not Found",
+    "chart": "Chart"
+  },
+  "recommended": "Recommended",
+  "error": {
+    "title": "Oooooops...",
+    "description": "Something Went Wrong!",
+    "link": "Go To Home Page"
+  }
+}
