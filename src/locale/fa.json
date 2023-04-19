@@ -5,7 +5,10 @@
     "dashboard": "داشبورد",
     "error": "مشکلی به وجود آمده!",
     "forget-password": "فراموشی رمز عبور",
-    "login": "ورود"
+    "login": "ورود",
+    "chart": "چارت",
+    "table": "جدول",
+    "card": "کارت"
   },
   "login": {
     "title": "سلام دنیا!",
@@ -44,17 +47,32 @@
   "chart": {
     "title": "چارت"
   },
+  "table": {
+    "title": "جدول"
+  },
+  "card": {
+    "title": "کارت"
+  },
   "menu": {
     "dashboard": "داشبورد",
     "login": "صفحه ورود",
     "forget-password": "فراموشی رمز عبور",
     "not-found": "پیدا نشد!",
-    "chart": "چارت"
+    "chart": "چارت",
+    "table": "جدول",
+    "card": "کارت"
   },
   "recommended": "توصیه شده",
   "error": {
     "title": "اوووووپس...",
     "description": "مشکلی به وجود آمده!",
     "link": "برو به صفحه اصلی"
+  },
+  "modal": {
+    "cancel": "لغو",
+    "confirm": "تایید",
+    "title": {
+      "edit-role": "ویرایش نقش"
+    }
   }
 }

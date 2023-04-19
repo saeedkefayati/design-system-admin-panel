@@ -1,5 +1,6 @@
 import {
   IoBarChartOutline,
+  IoFileTrayOutline,
   IoKeyOutline,
   IoLogInOutline,
   IoPieChartOutline,
@@ -11,36 +12,43 @@ const MenuItem = [
     id: 0,
     key: "dashboard",
     link: "/",
-    title: "Dashboard",
     icon: <IoPieChartOutline />,
   },
   {
     id: 1,
     key: "login",
     link: "/login",
-    title: "Login",
     icon: <IoLogInOutline />,
   },
   {
     id: 2,
     key: "forget-password",
     link: "/forget-password",
-    title: "Forget Password",
     icon: <IoKeyOutline />,
   },
   {
     id: 3,
     key: "not-found",
     link: "/not-found",
-    title: "Not Founnd",
     icon: <IoWarningOutline />,
   },
   {
     id: 4,
     key: "chart",
     link: "/chart",
-    title: "Chart",
     icon: <IoBarChartOutline />,
+  },
+  {
+    id: 5,
+    key: "table",
+    link: "/table",
+    icon: <IoBarChartOutline />,
+  },
+  {
+    id: 6,
+    key: "card",
+    link: "/card",
+    icon: <IoFileTrayOutline />,
   },
 ];
 

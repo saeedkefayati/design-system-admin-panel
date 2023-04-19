@@ -4,7 +4,7 @@ import {
   ComposableMap,
   Geographies,
   Geography,
-  Marker,
+  Marker
 } from "react-simple-maps";
 
 const geoUrl =
@@ -50,7 +50,7 @@ const MapChart = ({ country, latitude, longitude }: MapChartProps) => {
           {({ geographies }) =>
             geographies.map((geo) => (
               <Geography
-                key={geo.rsmKey}
+                key={crypto.randomUUID()}
                 geography={geo}
                 fill={theme.colors.blue[5]}
                 fillOpacity={0.6}

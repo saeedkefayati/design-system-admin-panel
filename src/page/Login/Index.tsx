@@ -13,7 +13,7 @@ import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
 import { z } from "zod";
-import SelectLanguage from "~/components/SelectLanguage";
+import SelectLanguage from "~/components/shared/SelectLanguage";
 import { UseLogin } from "~/hook/UseLogin";
 
 const schema = z.object({

@@ -17,7 +17,7 @@ import {
   IoSunnyOutline,
 } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import SelectLanguage from "~/components/SelectLanguage";
+import SelectLanguage from "~/components/shared/SelectLanguage";
 import Logo from "./Logo";
 import MenuHeader from "./Menu";
 

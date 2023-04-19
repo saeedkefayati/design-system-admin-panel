@@ -33,7 +33,7 @@ const NavbarLayout = ({ hidden }: NavbarLayoutProps) => {
           {MenuItem.map((item) => (
             <NavLink
               to={item.link}
-              key={item.id}
+              key={crypto.randomUUID()}
               style={({ isActive }) =>
                 isActive
                   ? {

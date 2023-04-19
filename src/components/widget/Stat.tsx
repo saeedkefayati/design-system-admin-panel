@@ -30,7 +30,7 @@ const Stat = ({ data, isLoading }: StatProps) => {
     const DiffIcon = stat.diff > 0 ? BsArrowUpRight : BsArrowDownRight;
 
     return (
-      <Skeleton visible={isLoading} key={stat.title}>
+      <Skeleton visible={isLoading} key={crypto.randomUUID()}>
         <Paper withBorder p="md" radius="md">
           <Group position="apart">
             <Text size="xs" color="dimmed" fw={700}>
@@ -69,6 +69,7 @@ const Stat = ({ data, isLoading }: StatProps) => {
   return (
     <SimpleGrid
       cols={4}
+      spacing="lg"
       breakpoints={[
         { maxWidth: "xs", cols: 1 },
         { maxWidth: "md", cols: 2 },

@@ -5,7 +5,10 @@
     "dashboard": "Dashboard",
     "error": "Something Went Wrong!",
     "forget-password": "Forget Password",
-    "login": "Login"
+    "login": "Login",
+    "chart": "Chart",
+    "table": "Table",
+    "card": "Card"
   },
   "login": {
     "title": "Hello World!",
@@ -44,17 +47,32 @@
   "chart": {
     "title": "Chart"
   },
+  "table": {
+    "title": "Table"
+  },
+  "card": {
+    "title": "Card"
+  },
   "menu": {
     "dashboard": "Dashboard",
     "login": "Login",
     "forget-password": "Forget Password",
     "not-found": "Not Found",
-    "chart": "Chart"
+    "chart": "Chart",
+    "table": "Table",
+    "card": "Card"
   },
   "recommended": "Recommended",
   "error": {
     "title": "Oooooops...",
     "description": "Something Went Wrong!",
     "link": "Go To Home Page"
+  },
+  "modal": {
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "title": {
+      "edit-role": "Edit Role"
+    }
   }
 }

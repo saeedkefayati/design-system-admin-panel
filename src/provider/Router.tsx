@@ -1,14 +1,17 @@
 import { Center, Loader } from "@mantine/core";
-import { lazy, Suspense } from "react";
+import { Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "~/layout/Layout";
+import NotFound from "~/page/404/Index";
+import Card from "~/page/Card/Index";
 import Chart from "~/page/Chart/Index";
+import Dashboard from "~/page/Dashboard/Index";
 import Error from "~/page/Error/Error";
+import ForgetPassword from "~/page/ForgetPassword/Index";
+import Login from "~/page/Login/Index";
+import Table from "~/page/Table/Index";
 
-const Dashboard = lazy(() => import("~/page/Dashboard/Index"));
-const NotFound = lazy(() => import("~/page/404/Index"));
-const Login = lazy(() => import("~/page/Login/Index"));
-const ForgetPassword = lazy(() => import("~/page/ForgetPassword/Index"));
+// const Dashboard = lazy(() => import("~/page/Dashboard/Index"));
 
 const router = createBrowserRouter([
   {
@@ -27,6 +30,14 @@ const router = createBrowserRouter([
       {
         path: "/chart",
         element: <Chart />,
+      },
+      {
+        path: "/table",
+        element: <Table />,
+      },
+      {
+        path: "/card",
+        element: <Card />,
       },
       // {
       //   path: '*',
