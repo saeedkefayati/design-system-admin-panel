@@ -3,10 +3,8 @@ import {
   Box,
   Card,
   Flex,
-  Group,
   Image,
   Overlay,
-  Space,
   Text,
   useMantineTheme,
 } from "@mantine/core";
@@ -15,11 +13,14 @@ import {
   IoEyeOutline,
   IoShareSocialOutline,
 } from "react-icons/io5";
+import { useSettingContext } from "~/provider/Context";
+import { DateCompact } from "~/util/dateFormat";
 import { NumberCompact } from "~/util/numberFormat";
 
 type CardBlogProps = {
   title: string;
   description: string;
+  date: string;
   src: string;
   viewCount?: number;
   commentCount?: number;
@@ -30,6 +31,7 @@ type CardBlogProps = {
 const CardBlog = ({
   title,
   src,
+  date,
   avatar,
   description,
   viewCount,
@@ -37,6 +39,7 @@ const CardBlog = ({
   shareCount,
 }: CardBlogProps) => {
   const theme = useMantineTheme();
+  const { dir } = useSettingContext();
 
   return (
     <Card shadow="sm" padding="lg" radius="md" withBorder>
@@ -80,18 +83,21 @@ const CardBlog = ({
               borderInlineEndColor: theme.black,
               borderBlockEndColor: theme.black,
               borderBlockStartColor: theme.white,
-              transform: "rotate(-45deg)",
+              transform: dir === "rtl" ? "rotate(-45deg)" : "rotate(45deg)",
             },
           })}
         >
           <Avatar src={avatar} alt={title} size="lg" />
         </Box>
       </Box>
-      <Group position="apart" mt="md" mb="xs">
+      <>
         <Text lineClamp={2} weight={500}>
           {title}
         </Text>
-        <Text lineClamp={2} color="gray">
+        <Text size="xs" color="gray">
+          {DateCompact(new Date())}
+        </Text>
+        <Text lineClamp={2} color="gray" mt="sm" mb="xs">
           {description}
         </Text>
         {(viewCount || commentCount || shareCount) && (
@@ -103,29 +109,26 @@ const CardBlog = ({
             wrap="wrap"
           >
             {viewCount ? (
-              <Flex>
-                <IoEyeOutline />
-                <Space w="sm" />
-                <Text>{NumberCompact(viewCount)}</Text>
+              <Flex align="center" gap={10}>
+                <IoEyeOutline size={16} />
+                <Text size="sm">{NumberCompact(viewCount)}</Text>
               </Flex>
             ) : null}
             {shareCount ? (
-              <Flex>
-                <IoShareSocialOutline />
-                <Space w="sm" />
-                <Text>{NumberCompact(shareCount)}</Text>
+              <Flex align="center" gap={10}>
+                <IoShareSocialOutline size={16} />
+                <Text size="sm">{NumberCompact(shareCount)}</Text>
               </Flex>
             ) : null}
             {commentCount ? (
-              <Flex>
-                <IoChatboxEllipsesOutline />
-                <Space w="sm" />
-                <Text>{NumberCompact(commentCount)}</Text>
+              <Flex align="center" gap={10}>
+                <IoChatboxEllipsesOutline size={16} />
+                <Text size="sm">{NumberCompact(commentCount)}</Text>
               </Flex>
             ) : null}
           </Flex>
         )}
-      </Group>
+      </>
     </Card>
   );
 };

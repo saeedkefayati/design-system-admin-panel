@@ -9,6 +9,8 @@ import Dashboard from "~/page/Dashboard/Index";
 import Error from "~/page/Error/Error";
 import ForgetPassword from "~/page/ForgetPassword/Index";
 import Login from "~/page/Login/Index";
+import Profile from "~/page/Profile/Index";
+import TabProfile from "~/page/Profile/Tabs/Index";
 import Table from "~/page/Table/Index";
 
 // const Dashboard = lazy(() => import("~/page/Dashboard/Index"));
@@ -30,6 +32,16 @@ const router = createBrowserRouter([
       {
         path: "/chart",
         element: <Chart />,
+      },
+      {
+        path: "/profile",
+        element: <Profile />,
+        children: [
+          {
+            path: ":tabValue",
+            element: <TabProfile />,
+          },
+        ],
       },
       {
         path: "/table",

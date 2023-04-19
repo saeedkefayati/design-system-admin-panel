@@ -1,6 +1,7 @@
 import {
   IoBarChartOutline,
   IoFileTrayOutline,
+  IoGridOutline,
   IoKeyOutline,
   IoLogInOutline,
   IoPieChartOutline,
@@ -42,7 +43,7 @@ const MenuItem = [
     id: 5,
     key: "table",
     link: "/table",
-    icon: <IoBarChartOutline />,
+    icon: <IoGridOutline />,
   },
   {
     id: 6,

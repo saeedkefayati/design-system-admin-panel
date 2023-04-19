@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import CardBlog from "~/components/widget/CardBlog";
+import CardBlogBackground from "~/components/widget/CardBlogBackground";
 import CardProduct from "~/components/widget/CardProduct";
 import CustomBreadcrumb from "~/components/widget/CustomBreadcrumb";
 import { UseTest } from "~/hook/UseTest";
@@ -41,6 +42,7 @@ const Card = () => {
         <Grid.Col sm={6} md={6} lg={4}>
           <Skeleton visible={isLoading}>
             <CardBlog
+              date="4/19/2023, 4:20:18 PM"
               description="With Fjord Tours you can explore more of the magical fjord landscapes
                 with tours and activities on and around the fjords of Norway"
               title="Norway Fjord Adventures"
@@ -52,6 +54,21 @@ const Card = () => {
         <Grid.Col sm={6} md={6} lg={4}>
           <Skeleton visible={isLoading}>
             <CardBlog
+              date="4/19/2023, 4:20:18 PM"
+              viewCount={123456789}
+              commentCount={2345678}
+              // shareCount={354897}
+              description="With Fjord Tours you can explore more of the magical fjord landscapes
+                with tours and activities on and around the fjords of Norway"
+              title="Norway Fjord Adventures"
+              src="https://api-prod-minimal-v4.vercel.app/assets/images/products/product_21.jpg"
+              avatar="https://avatars.githubusercontent.com/u/10353856?s=460&u=88394dfd67727327c1f7670a1764dc38a8a24831&v=4"
+            />
+          </Skeleton>
+        </Grid.Col>
+        <Grid.Col sm={6} md={6} lg={4}>
+          <Skeleton visible={isLoading}>
+            <CardBlogBackground
               viewCount={123456789}
               commentCount={2345678}
               // shareCount={354897}

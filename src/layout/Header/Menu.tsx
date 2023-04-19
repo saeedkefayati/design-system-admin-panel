@@ -21,11 +21,13 @@ const MenuHeader = () => {
         </Avatar>
       </Menu.Target>
       <Menu.Dropdown>
-        <Menu.Item>
-          <Box>
-            <Text fw="bold">John Doe</Text>
-          </Box>
-        </Menu.Item>
+        <Link to="/profile/setting">
+          <Menu.Item>
+            <Box>
+              <Text fw="bold">John Doe</Text>
+            </Box>
+          </Menu.Item>
+        </Link>
         <Menu.Divider />
         <Link to="/">
           <Menu.Item

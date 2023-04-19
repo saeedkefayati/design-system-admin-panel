@@ -8,7 +8,8 @@
     "login": "ورود",
     "chart": "چارت",
     "table": "جدول",
-    "card": "کارت"
+    "card": "کارت",
+    "profile": "صفحه کاربری"
   },
   "login": {
     "title": "سلام دنیا!",
@@ -44,6 +45,10 @@
     "copy": "کپی",
     "copied": "کپی شد"
   },
+  "profile": {
+    "title": "صفحه کاربری",
+    "setting": "تنظیمات"
+  },
   "chart": {
     "title": "چارت"
   },
@@ -60,7 +65,8 @@
     "not-found": "پیدا نشد!",
     "chart": "چارت",
     "table": "جدول",
-    "card": "کارت"
+    "card": "کارت",
+    "profile": "صفحه کاربری"
   },
   "recommended": "توصیه شده",
   "error": {
