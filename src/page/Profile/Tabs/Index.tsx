@@ -1,7 +1,8 @@
 import { Tabs } from "@mantine/core";
 import { useTranslation } from "react-i18next";
-import { IoSettingsOutline } from "react-icons/io5";
+import { IoAlertCircleOutline, IoSettingsOutline } from "react-icons/io5";
 import { useNavigate, useParams } from "react-router-dom";
+import ProfileSection from "./Profile";
 import SettingSection from "./Setting";
 
 const TabProfile = () => {
@@ -11,25 +12,25 @@ const TabProfile = () => {
 
   return (
     <Tabs
-      color="dark"
       // defaultValue="setting"
+      color="blue"
+      variant="pills"
       value={tabValue}
       onTabChange={(value) => navigate(`/profile/${value}`)}
-      allowTabDeactivation
     >
       <Tabs.List>
+        <Tabs.Tab value="info" icon={<IoAlertCircleOutline size={16} />}>
+          {t("profile.info")}
+        </Tabs.Tab>
         <Tabs.Tab value="setting" icon={<IoSettingsOutline size={16} />}>
           {t("profile.setting")}
         </Tabs.Tab>
-        <Tabs.Tab value="cart" icon={<IoSettingsOutline size={16} />}>
-          Settings
-        </Tabs.Tab>
       </Tabs.List>
+      <Tabs.Panel value="info" pt="xs">
+        <ProfileSection />
+      </Tabs.Panel>
       <Tabs.Panel value="setting" pt="xs">
         <SettingSection />
-      </Tabs.Panel>
-      <Tabs.Panel value="cart" pt="xs">
-        Cart tab content
       </Tabs.Panel>
     </Tabs>
   );

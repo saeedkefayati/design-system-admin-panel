@@ -47,7 +47,13 @@
   },
   "profile": {
     "title": "صفحه کاربری",
-    "setting": "تنظیمات"
+    "info": "اطلاعات",
+    "setting": "تنظیمات",
+    "username": "نام کاربری",
+    "email": "آدرس ایمیل",
+    "phone": "شماره تلفن",
+    "password": "رمز عبور",
+    "confirm-password": "تکرار رمز عبور"
   },
   "chart": {
     "title": "چارت"

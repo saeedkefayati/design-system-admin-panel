@@ -42,13 +42,19 @@ export function CardProfile({
   ));
 
   return (
-    <Card padding="xl" radius="md" className={classes.card}>
+    <Card
+      padding="xl"
+      radius="md"
+      shadow="xs"
+      className={classes.card}
+      withBorder
+    >
       <Card.Section
         sx={{
           backgroundImage: `url(${image})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          height: 150,
+          height: 200,
         }}
       />
       <Avatar

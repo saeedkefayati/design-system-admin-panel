@@ -21,7 +21,7 @@ const MenuHeader = () => {
         </Avatar>
       </Menu.Target>
       <Menu.Dropdown>
-        <Link to="/profile/setting">
+        <Link to="/profile/info">
           <Menu.Item>
             <Box>
               <Text fw="bold">John Doe</Text>

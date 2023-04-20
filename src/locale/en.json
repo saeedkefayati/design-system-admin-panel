@@ -47,7 +47,13 @@
   },
   "profile": {
     "title": "Profile",
-    "setting": "Setting"
+    "info": "Info",
+    "setting": "Setting",
+    "username": "Username",
+    "email": "Email Address",
+    "phone": "Phone",
+    "password": "Password",
+    "confirm-password": "Confirm Password"
   },
   "chart": {
     "title": "Chart"

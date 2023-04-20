@@ -42,16 +42,16 @@ const NavbarLayout = ({ hidden }: NavbarLayoutProps) => {
                         ? theme.colors.dark[5]
                         : theme.colors.blue[5],
                       color: dark ? theme.colors.dark[0] : theme.white,
-                      fontWeight: "700",
+                      display: "flex",
                     }
-                  : { color: "currentcolor" }
+                  : { color: "currentcolor", display: "flex" }
               }
               end
             >
               <UnstyledButton
                 sx={() => ({
                   width: "100%",
-                  padding: theme.spacing.xs,
+                  padding: 8,
                   borderRadius: theme.radius.sm,
                   color: "inherit",
                   fontWeight: "inherit",

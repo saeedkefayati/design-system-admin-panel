@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import {
   IoBarChartOutline,
   IoFileTrayOutline,
@@ -8,48 +9,55 @@ import {
   IoWarningOutline,
 } from "react-icons/io5";
 
-const MenuItem = [
+type MenuItemProps = {
+  id: number;
+  key: string;
+  link: string;
+  icon: ReactNode;
+}[];
+
+const MenuItem: MenuItemProps = [
   {
     id: 0,
     key: "dashboard",
     link: "/",
-    icon: <IoPieChartOutline />,
+    icon: <IoPieChartOutline size={20} />,
   },
   {
     id: 1,
     key: "login",
     link: "/login",
-    icon: <IoLogInOutline />,
+    icon: <IoLogInOutline size={20} />,
   },
   {
     id: 2,
     key: "forget-password",
     link: "/forget-password",
-    icon: <IoKeyOutline />,
+    icon: <IoKeyOutline size={20} />,
   },
   {
     id: 3,
     key: "not-found",
     link: "/not-found",
-    icon: <IoWarningOutline />,
+    icon: <IoWarningOutline size={20} />,
   },
   {
     id: 4,
     key: "chart",
     link: "/chart",
-    icon: <IoBarChartOutline />,
+    icon: <IoBarChartOutline size={20} />,
   },
   {
     id: 5,
     key: "table",
     link: "/table",
-    icon: <IoGridOutline />,
+    icon: <IoGridOutline size={20} />,
   },
   {
     id: 6,
     key: "card",
     link: "/card",
-    icon: <IoFileTrayOutline />,
+    icon: <IoFileTrayOutline size={20} />,
   },
 ];
 
