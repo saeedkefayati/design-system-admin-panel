@@ -101,21 +101,9 @@ export function UserRoleTable({ data }: UserRoleTableProps) {
   const statusFunc = (status: "active" | "de-active" | "pending") => {
     return (
       <>
-        {status === "active" && (
-          <Badge variant="filled" color="green">
-            active
-          </Badge>
-        )}
-        {status === "de-active" && (
-          <Badge variant="filled" color="red">
-            de-active
-          </Badge>
-        )}
-        {status === "pending" && (
-          <Badge variant="filled" color="yellow">
-            pending
-          </Badge>
-        )}
+        {status === "active" && <Badge color="green">active</Badge>}
+        {status === "de-active" && <Badge color="red">de-active</Badge>}
+        {status === "pending" && <Badge color="yellow">pending</Badge>}
       </>
     );
   };
