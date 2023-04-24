@@ -39,6 +39,7 @@ const SettingSection = () => {
           label={t("profile.password")}
           visible={visible}
           onVisibilityChange={toggle}
+          disabled={isLoading}
           {...form.getInputProps("password")}
         />
         <PasswordInput
@@ -47,6 +48,7 @@ const SettingSection = () => {
           label={t("profile.password-confirm")}
           visible={visible}
           onVisibilityChange={toggle}
+          disabled={isLoading}
           {...form.getInputProps("confirmPassword")}
         />
         <Button type="submit" loading={isLoading}>

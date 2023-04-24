@@ -36,18 +36,21 @@ const ProfileSection = () => {
           id={id}
           label={t("profile.username")}
           icon={<IoPersonOutline size={16} />}
+          disabled={isLoading}
           {...form.getInputProps("username")}
         />
         <TextInput
           id={id}
           label={t("profile.email")}
           icon={<IoAtOutline size={16} />}
+          disabled={isLoading}
           {...form.getInputProps("email")}
         />
         <TextInput
           id={id}
           label={t("profile.phone")}
           icon={<IoPhonePortraitOutline size={16} />}
+          disabled={isLoading}
           {...form.getInputProps("phone")}
         />
         <Button type="submit" loading={isLoading}>
