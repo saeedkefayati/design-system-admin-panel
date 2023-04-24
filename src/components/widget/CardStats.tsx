@@ -87,8 +87,8 @@ export function CardStats({ title, completed, total, stats }: CardStatsProps) {
         <div className={classes.ring}>
           <RingProgress
             roundCaps
-            thickness={6}
-            size={150}
+            thickness={10}
+            size={160}
             sections={[
               { value: (completed / total) * 100, color: theme.primaryColor },
             ]}

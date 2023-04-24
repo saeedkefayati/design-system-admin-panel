@@ -48,12 +48,25 @@
   "profile": {
     "title": "Profile",
     "info": "Info",
+    "info-change": "Change Info",
     "setting": "Setting",
+    "avatar": "Avatar",
+    "avatar-dropzone-title": "Drag image here or click to select file",
+    "avatar-dropzone-description": "Size of file should not exceed 3mb",
+    "avatar-error-title": "File is too large.",
+    "avatar-error-description": "File is larget than 3MB.",
+    "avatar-change": "Change Avatar",
     "username": "Username",
+    "username-length": "Username is too short, username must have at least 8 letters.",
     "email": "Email Address",
+    "email-error": "Email Address is not valid.",
     "phone": "Phone",
+    "phone-length": "Phone is not valid.",
     "password": "Password",
-    "confirm-password": "Confirm Password"
+    "password-confirm": "Confirm Password",
+    "password-length": "Password is too short, password must have at least 6 letters.",
+    "password-error": "Password does not match with Confirm Password.",
+    "password-change": "Change Password"
   },
   "chart": {
     "title": "Chart"

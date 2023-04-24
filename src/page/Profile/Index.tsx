@@ -1,4 +1,4 @@
-import { Grid, Paper, Skeleton } from "@mantine/core";
+import { Grid, Skeleton } from "@mantine/core";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { Link, Outlet } from "react-router-dom";
@@ -17,11 +17,9 @@ const Profile = () => {
         <Link to="/profile">{t("profile.title")}</Link>
       </CustomBreadcrumb>
       <Grid gutter="md">
-        <Grid.Col sm={6} md={8}>
+        <Grid.Col order={1} orderSm={0} sm={6} lg={8}>
           <Skeleton visible={isLoading}>
-            <Paper shadow="sm" p="lg" radius="md" withBorder>
-              <Outlet />
-            </Paper>
+            <Outlet />
           </Skeleton>
         </Grid.Col>
         <Grid.Col sm={6} lg={4}>

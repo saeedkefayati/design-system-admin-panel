@@ -1,22 +1,26 @@
 import { showNotification } from "@mantine/notifications";
+import { ReactNode } from "react";
 
 type Toast = {
   title: string;
   message: string;
+  icon?: ReactNode;
 };
 
-export const toastError = ({ title, message }: Toast) => {
+export const toastError = ({ title, message, icon }: Toast) => {
   showNotification({
-    title: title,
-    message: message,
     color: "red",
+    title,
+    message,
+    icon,
   });
 };
 
-export const toastSuccess = ({ title, message }: Toast) => {
+export const toastSuccess = ({ title, message, icon }: Toast) => {
   showNotification({
-    title: title,
-    message: message,
     color: "green",
+    title,
+    message,
+    icon,
   });
 };

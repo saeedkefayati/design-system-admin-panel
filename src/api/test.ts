@@ -11,4 +11,9 @@ const getTest = async () => {
   return data;
 };
 
-export { getTest };
+const postTest = async (body: any) => {
+  const { data } = await api.post("/posts", body);
+  return data;
+};
+
+export { getTest, postTest };

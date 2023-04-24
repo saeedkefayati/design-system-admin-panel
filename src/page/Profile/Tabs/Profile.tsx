@@ -1,4 +1,5 @@
-import { Input, Stack } from "@mantine/core";
+import { Button, Stack, TextInput } from "@mantine/core";
+import { useForm, zodResolver } from "@mantine/form";
 import { useId } from "react";
 import { useTranslation } from "react-i18next";
 import {
@@ -6,32 +7,54 @@ import {
   IoPersonOutline,
   IoPhonePortraitOutline,
 } from "react-icons/io5";
+import { UsePostTest } from "~/hook/UseTest";
+import { ProfileInformationSchema } from "~/schema/Profile";
 
 const ProfileSection = () => {
-  const { t } = useTranslation();
   const id = useId();
+  const { isLoading, mutate } = UsePostTest();
+  const { t } = useTranslation();
+
+  const form = useForm({
+    validate: zodResolver(ProfileInformationSchema),
+    initialValues: {
+      username: "saeedkefayati",
+      email: "s.kefayati2012@gmail.com",
+      phone: "09120470553",
+    },
+  });
 
   return (
-    <Stack>
-      <Input.Wrapper id={id} label={t("profile.username")}>
-        <Input
+    <form
+      onSubmit={form.onSubmit((values) => {
+        console.log(values);
+        mutate("hi");
+      })}
+    >
+      <Stack>
+        <TextInput
+          id={id}
+          label={t("profile.username")}
           icon={<IoPersonOutline size={16} />}
-          defaultValue="saeedkefayati"
+          {...form.getInputProps("username")}
         />
-      </Input.Wrapper>
-      <Input.Wrapper id={id} label={t("profile.email")}>
-        <Input
+        <TextInput
+          id={id}
+          label={t("profile.email")}
           icon={<IoAtOutline size={16} />}
-          defaultValue="s.kefayati2012@gmail.com"
+          {...form.getInputProps("email")}
         />
-      </Input.Wrapper>
-      <Input.Wrapper id={id} label={t("profile.phone")}>
-        <Input
+        <TextInput
+          id={id}
+          label={t("profile.phone")}
           icon={<IoPhonePortraitOutline size={16} />}
-          defaultValue="09120470553"
+          {...form.getInputProps("phone")}
         />
-      </Input.Wrapper>
-    </Stack>
+        <Button type="submit" loading={isLoading}>
+          {t("profile.info-change")}
+        </Button>
+      </Stack>
+    </form>
   );
 };
 

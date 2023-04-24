@@ -48,12 +48,25 @@
   "profile": {
     "title": "صفحه کاربری",
     "info": "اطلاعات",
+    "info-change": "تغییر اطلاعات حساب",
     "setting": "تنظیمات",
+    "avatar": "آواتار",
+    "avatar-dropzone-title": "تصویر را به اینجا بکشید یا برای انتخاب فایل کلیک کنید",
+    "avatar-dropzone-description": "حجم فایل نباید بیش از 3 مگابایت باشد",
+    "avatar-error-title": "حجم فایل زیاد است.",
+    "avatar-error-description": "حجم فایل بیشتر از 3 مگابایت می باشد.",
+    "avatar-change": "تغییر آواتار",
     "username": "نام کاربری",
+    "username-length": "نام کاربری کوتاه است، حداقل باید 8 کاراکتر وارد کنید.",
     "email": "آدرس ایمیل",
+    "email-error": "آدرس ایمیل وارد شده معتبر نیست.",
     "phone": "شماره تلفن",
+    "phone-length": "شماره تلفن معتبر نیست.",
     "password": "رمز عبور",
-    "confirm-password": "تکرار رمز عبور"
+    "password-confirm": "تکرار رمز عبور",
+    "password-length": "رمز عبور کوتاه است، حداقل باید 6 کاراکتر وارد کنید.",
+    "password-error": "رمز عبور با تکرار رمز عبور مغایرت دارد. ",
+    "password-change": "تغییر رمز عبور"
   },
   "chart": {
     "title": "چارت"
