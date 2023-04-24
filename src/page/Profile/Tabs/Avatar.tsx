@@ -10,7 +10,7 @@ import {
 import { Dropzone, FileWithPath, IMAGE_MIME_TYPE } from "@mantine/dropzone";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { IoImageOutline } from "react-icons/io5";
+import ImageUpload from "~/components/illustration/ImageUpload";
 import { UsePostTest } from "~/hook/UseTest";
 import { toastError } from "~/util/toast";
 
@@ -75,7 +75,7 @@ const AvatarSection = () => {
             spacing="xl"
             style={{ minHeight: rem(245), pointerEvents: "none" }}
           >
-            <IoImageOutline size={48} />
+            <ImageUpload width="200" height="200" />
             <div>
               <Text size="xl" inline>
                 {t("profile.avatar-dropzone-title")}

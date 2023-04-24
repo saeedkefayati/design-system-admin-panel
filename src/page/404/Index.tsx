@@ -9,7 +9,7 @@ import {
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import ImageNotFound from "./ImageNotFound";
+import ImageNotFound from "../../components/illustration/ImageNotFound";
 
 const useStyles = createStyles((theme) => ({
   root: {
