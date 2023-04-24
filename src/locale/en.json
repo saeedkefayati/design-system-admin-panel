@@ -1,6 +1,6 @@
 {
   "seo": {
-    "title": "Hello World!",
+    "title": "Salamat News",
     "not-found": "Not Found",
     "dashboard": "Dashboard",
     "error": "Something Went Wrong!",
@@ -12,7 +12,7 @@
     "profile": "Profile"
   },
   "login": {
-    "title": "Hello World!",
+    "title": "Salamat News",
     "email": "Email Address",
     "password": "Your Password",
     "forget-password": "Forget Your Password?",

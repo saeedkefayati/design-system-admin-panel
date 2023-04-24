@@ -1,4 +1,4 @@
-import { Paper, Tabs } from "@mantine/core";
+import { Paper, Tabs, useMantineTheme } from "@mantine/core";
 import { useTranslation } from "react-i18next";
 import {
   IoAlertCircleOutline,
@@ -11,6 +11,7 @@ import ProfileSection from "./Profile";
 import SettingSection from "./Setting";
 
 const TabProfile = () => {
+  const theme = useMantineTheme();
   const navigate = useNavigate();
   const { tabValue } = useParams();
   const { t } = useTranslation();
@@ -19,7 +20,7 @@ const TabProfile = () => {
     <Paper shadow="sm" p="lg" radius="md" withBorder>
       <Tabs
         // defaultValue="setting"
-        color="blue"
+        color={theme.primaryColor}
         variant="pills"
         value={tabValue}
         onTabChange={(value) => navigate(`/profile/${value}`)}

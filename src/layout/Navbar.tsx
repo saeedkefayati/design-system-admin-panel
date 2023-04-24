@@ -40,7 +40,7 @@ const NavbarLayout = ({ hidden }: NavbarLayoutProps) => {
                       borderRadius: "4px",
                       backgroundColor: dark
                         ? theme.colors.dark[5]
-                        : theme.colors.blue[5],
+                        : theme.primaryColor,
                       color: dark ? theme.colors.dark[0] : theme.white,
                       display: "flex",
                     }
@@ -59,23 +59,13 @@ const NavbarLayout = ({ hidden }: NavbarLayoutProps) => {
                   "&:hover": {
                     backgroundColor: dark
                       ? theme.colors.dark[5]
-                      : theme.colors.blue[5],
+                      : theme.primaryColor,
                     color: theme.white,
-                  },
-
-                  "&:focus": {
-                    backgroundColor: dark
-                      ? theme.colors.dark[6]
-                      : theme.colors.blue[6],
                   },
                 })}
               >
                 <Group>
-                  <ThemeIcon
-                    color={dark ? theme.colors.dark[1] : theme.colors.blue[1]}
-                    variant="light"
-                    size="lg"
-                  >
+                  <ThemeIcon variant="light" size="lg">
                     {item.icon}
                   </ThemeIcon>
                   <Text

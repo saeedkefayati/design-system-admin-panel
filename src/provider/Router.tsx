@@ -1,6 +1,7 @@
 import { Center, Loader } from "@mantine/core";
 import { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import SalamtNewsLogo from "~/components/core/SalamtNewsLogo";
 import Layout from "~/layout/Layout";
 import NotFound from "~/page/404/Index";
 import Error from "~/page/Error/Error";
@@ -71,7 +72,8 @@ const ProviderRouter = () => {
     <Suspense
       fallback={
         <Center w="100vw" h="100vh">
-          <Loader size="xl" />
+          {/* <TypoLogo /> */}
+          <SalamtNewsLogo />
         </Center>
       }
     >

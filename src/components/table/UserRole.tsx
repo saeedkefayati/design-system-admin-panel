@@ -84,7 +84,7 @@ export function UserRoleTable({ data }: UserRoleTableProps) {
           <Switch
             onLabel={<IoCheckmarkOutline size={16} color={theme.white} />}
             offLabel={<IoCloseOutline size={16} color={theme.colors.red[5]} />}
-            color="green"
+            color={theme.primaryColor}
             size="md"
           />
           <Space h="md" />

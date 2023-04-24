@@ -47,7 +47,7 @@ const Stat = ({ data, isLoading }: StatProps) => {
           <Group align="center" position="right" spacing="xs" mt={25}>
             <Text
               dir="ltr"
-              color={stat.diff > 0 ? "teal" : "red"}
+              color={stat.diff > 0 ? "green" : "red"}
               size="sm"
               weight={500}
               lh={1}

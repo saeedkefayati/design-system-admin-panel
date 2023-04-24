@@ -17,8 +17,8 @@ import {
   IoSunnyOutline,
 } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import SalamtNewsLogo from "~/components/core/SalamtNewsLogo";
 import SelectLanguage from "~/components/shared/SelectLanguage";
-import Logo from "./Logo";
 import MenuHeader from "./Menu";
 
 type HeaderProps = {
@@ -30,7 +30,7 @@ type HeaderProps = {
 const HeaderLayout = ({ theme, opened, setOpened }: HeaderProps) => {
   const { toggle, fullscreen } = useFullscreen();
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
-  const dark = colorScheme === "dark";
+  const dark = theme.colorScheme === "dark";
 
   return (
     <Header height={{ base: 70 }} p="lg">
@@ -51,21 +51,21 @@ const HeaderLayout = ({ theme, opened, setOpened }: HeaderProps) => {
           justify="space-between"
         >
           <Link to="/" style={{ display: "flex" }}>
-            <Logo colorScheme={colorScheme} theme={theme} />
+            <SalamtNewsLogo />
           </Link>
           <Flex gap={{ base: "xs", sm: "md" }} align="center">
             <Tooltip label="Ctrl + F">
               <ActionIcon
                 variant="subtle"
-                color="blue"
+                color={theme.primaryColor}
                 onClick={toggle}
                 title="toggle fullscreen"
                 size="lg"
               >
                 {fullscreen ? (
-                  <IoContractOutline color={theme.colors.blue[5]} />
+                  <IoContractOutline color={theme.primaryColor} />
                 ) : (
-                  <IoExpandOutline color={theme.colors.blue[5]} />
+                  <IoExpandOutline color={theme.primaryColor} />
                 )}
               </ActionIcon>
             </Tooltip>

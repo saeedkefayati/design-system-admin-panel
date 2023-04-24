@@ -14,7 +14,7 @@ const MenuHeader = () => {
           radius="xl"
           size={34}
           alt="user avatar"
-          color={theme.colors.blue[5]}
+          color={theme.primaryColor}
           style={{ cursor: "pointer" }}
         >
           JD
@@ -31,7 +31,7 @@ const MenuHeader = () => {
         <Menu.Divider />
         <Link to="/">
           <Menu.Item
-            icon={<IoPersonCircleOutline color={theme.colors.blue[5]} />}
+            icon={<IoPersonCircleOutline color={theme.primaryColor} />}
           >
             {t("menu.dashboard")}
           </Menu.Item>

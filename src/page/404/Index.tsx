@@ -2,15 +2,14 @@ import {
   Button,
   Container,
   createStyles,
-  Image,
   SimpleGrid,
   Text,
-  Title,
+  Title
 } from "@mantine/core";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import image from "./404.svg";
+import ImageNotFound from "./ImageNotFound";
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -35,18 +34,6 @@ const useStyles = createStyles((theme) => ({
       width: "100%",
     },
   },
-
-  mobileImage: {
-    [theme.fn.largerThan("sm")]: {
-      display: "none",
-    },
-  },
-
-  desktopImage: {
-    [theme.fn.smallerThan("sm")]: {
-      display: "none",
-    },
-  },
 }));
 
 const NotFound = () => {
@@ -63,7 +50,7 @@ const NotFound = () => {
           breakpoints={[{ maxWidth: "sm", cols: 1, spacing: 40 }]}
           style={{ alignItems: "center" }}
         >
-          <Image src={image} className={classes.mobileImage} />
+          <ImageNotFound />
           <div>
             <Title className={classes.title}>{t("error.title")}</Title>
             <Text color="dimmed" size="lg">
@@ -79,7 +66,6 @@ const NotFound = () => {
               {t("error.link")}
             </Button>
           </div>
-          <Image src={image} className={classes.desktopImage} />
         </SimpleGrid>
       </Container>
     </>

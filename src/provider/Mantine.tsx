@@ -42,6 +42,7 @@ const ProviderMantine = ({ children }: PropsWithChildren) => {
           colorScheme,
           fontFamily: languageFont[lang],
           datesLocale: lang,
+          primaryColor: "teal",
         }}
         emotionCache={dir === "rtl" ? rtlCache : undefined}
         withGlobalStyles
