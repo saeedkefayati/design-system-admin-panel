@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { CardStats } from "~/components/widget/CardStats";
 import CheckDevice from "~/components/widget/CheckDevice";
 import CustomBreadcrumb from "~/components/widget/CustomBreadcrumb";
-import MapChart from "~/components/widget/MapChart";
+import MapChart from "~/components/map/MapChart";
 import ProgressCard from "~/components/widget/ProgressCard";
 import Stat from "~/components/widget/Stat";
 import StatsRingProgress from "~/components/widget/StatsRingProgress";
