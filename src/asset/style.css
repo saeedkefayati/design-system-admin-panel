@@ -16,17 +16,21 @@
   src: url("./font/Inter.var.woff2") format("woff2 supports variations"),
     url("./font/Inter.var.woff2") format("woff2-variations");
 }
+:root {
+  --font-family-vazir: "Vazirmatn", sans-serif;
+  --font-family-inter: "Inter var", sans-serif;
+}
 
 * {
   user-select: none !important;
 }
 
-*[dir="rtl"] {
-  font-family: "Vazirmatn", sans-serif;
+[dir="rtl"] * {
+  font-family: var(--font-family-vazir);
 }
 
-*[dir="ltr"] {
-  font-family: "Inter var", sans-serif;
+[dir="ltr"] * {
+  font-family: var(--font-family-inter);
 }
 
 [dir="rtl"] body {
@@ -35,6 +39,12 @@
 
 a {
   text-decoration: none;
+}
+
+[class*="Image-root"] figure,
+[class*="Image-imageWrapper"],
+[class*="Image-root"] img {
+  height: 100% !important;
 }
 
 .rsm-svg *:focus {
@@ -71,6 +81,23 @@ a {
   animation-fill-mode: both;
   animation-name: fadeIn;
 }
+
+/* text editor */
+.quill {
+  border-radius: 0.25rem;
+}
+.ql-toolbar.ql-snow {
+  border-start-end-radius: 0.25rem;
+  border-start-start-radius: 0.25rem;
+}
+.ql-container.ql-snow {
+  border-end-end-radius: 0.25rem;
+  border-end-start-radius: 0.25rem;
+}
+.ql-editor {
+  min-height: 15rem;
+}
+/* text editor */
 
 /* animation */
 @keyframes pulse {

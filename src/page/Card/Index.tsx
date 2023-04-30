@@ -8,7 +8,7 @@ import CardProduct from "~/components/widget/CardProduct";
 import CustomBreadcrumb from "~/components/widget/CustomBreadcrumb";
 import { UseTest } from "~/hook/UseTest";
 
-const Card = () => {
+const CardPage = () => {
   const { isLoading } = UseTest();
   const { t } = useTranslation();
 
@@ -85,4 +85,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default CardPage;

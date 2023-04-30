@@ -6,10 +6,14 @@
     "error": "Something Went Wrong!",
     "forget-password": "Forget Password",
     "login": "Login",
+    "lock": "Lock",
     "chart": "Chart",
     "table": "Table",
     "card": "Card",
-    "profile": "Profile"
+    "profile": "Profile",
+    "blog": "Blog",
+    "blog-add": "Add Blog",
+    "blog-edit": "Edit Blog"
   },
   "login": {
     "title": "Salamat News",
@@ -17,7 +21,9 @@
     "password": "Your Password",
     "forget-password": "Forget Your Password?",
     "submit": "Login",
-    "language": "Choose Your Language"
+    "language": "Choose Your Language",
+    "email-error": "Invalid Email.",
+    "password-error": "Password must be 6-12 characters long"
   },
   "forget-password": {
     "title": "Forgot your password?",
@@ -25,6 +31,11 @@
     "email": "Email Address",
     "reset-password": "Change Password",
     "back": "Back To Login Page"
+  },
+  "lock": {
+    "title": "Account Locked",
+    "sub-title": "Hello {{name}}, enter your password to unlock the screen!",
+    "submit": "Login Again"
   },
   "home": {
     "title": "Home",
@@ -77,6 +88,41 @@
   "card": {
     "title": "Card"
   },
+  "blog": {
+    "title": "Blog"
+  },
+  "add-blog": {
+    "title": "Add Blog",
+    "post-title": "Title",
+    "post-title-description": "Title Of Your Blog",
+    "post-description": "Description",
+    "post-description-description": "Description Of Your Blog",
+    "post-slug": "Slug",
+    "post-slug-description": "Slug Of Your Blog",
+    "post-image": "Image",
+    "post-image-description": "Main Image Of Your Blog",
+    "post-content": "Content",
+    "post-content-description": "Content Of Your Blog",
+    "post-content-placeholder": "Enter Your Content...",
+    "post-category": "Category",
+    "post-category-description": "Main Category Of Your Blog"
+  },
+  "edit-blog": {
+    "title": "Edit Blog",
+    "post-title": "Title",
+    "post-title-description": "Title Of Your Blog",
+    "post-description": "Description",
+    "post-description-description": "Description Of Your Blog",
+    "post-slug": "Slug",
+    "post-slug-description": "Slug Of Your Blog",
+    "post-image": "Image",
+    "post-image-description": "Main Image Of Your Blog",
+    "post-content": "Content",
+    "post-content-description": "Content Of Your Blog",
+    "post-content-placeholder": "Enter Your Content...",
+    "post-category": "Category",
+    "post-category-description": "Main Category Of Your Blog"
+  },
   "menu": {
     "dashboard": "Dashboard",
     "login": "Login",
@@ -85,7 +131,9 @@
     "chart": "Chart",
     "table": "Table",
     "card": "Card",
-    "profile": "Profile"
+    "profile": "Profile",
+    "blog": "Blog",
+    "blog-add": "Add Blog"
   },
   "recommended": "Recommended",
   "error": {
@@ -99,5 +147,13 @@
     "title": {
       "edit-role": "Edit Role"
     }
+  },
+  "form": {
+    "required": "This Field Is Required.",
+    "empty": "This Field Is Empty."
+  },
+  "filter": {
+    "asc": "Ascending",
+    "desc": "Descending"
   }
 }

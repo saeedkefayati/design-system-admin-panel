@@ -1,6 +1,7 @@
 import { AppShell, Container, useMantineTheme } from "@mantine/core";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
+import Idle from "~/components/shared/Idle";
 import Header from "./Header/Index";
 import Navbar from "./Navbar";
 
@@ -10,6 +11,7 @@ const Layout = () => {
 
   return (
     <>
+      <Idle />
       <AppShell
         styles={{
           main: {

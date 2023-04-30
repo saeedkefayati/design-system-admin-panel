@@ -3,17 +3,21 @@ import { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SalamtNewsLogo from "~/components/core/SalamtNewsLogo";
 import Layout from "~/layout/Layout";
-import NotFound from "~/page/404/Index";
+import NotFoundPage from "~/page/404/Index";
+import CreateBlogPage from "~/page/Blog/Create";
+import EditBlogPage from "~/page/Blog/Edit";
 import Error from "~/page/Error/Error";
 
-const Card = lazy(() => import("~/page/Card/Index"));
-const Chart = lazy(() => import("~/page/Chart/Index"));
-const Dashboard = lazy(() => import("~/page/Dashboard/Index"));
-const ForgetPassword = lazy(() => import("~/page/ForgetPassword/Index"));
-const Login = lazy(() => import("~/page/Login/Index"));
-const Profile = lazy(() => import("~/page/Profile/Index"));
+const CardPage = lazy(() => import("~/page/Card/Index"));
+const ChartPage = lazy(() => import("~/page/Chart/Index"));
+const DashboardPage = lazy(() => import("~/page/Dashboard/Index"));
+const ForgetPasswordPage = lazy(() => import("~/page/ForgetPassword/Index"));
+const LoginPage = lazy(() => import("~/page/Login/Index"));
+const ProfilePage = lazy(() => import("~/page/Profile/Index"));
 const TabProfile = lazy(() => import("~/page/Profile/Tabs/Index"));
-const Table = lazy(() => import("~/page/Table/Index"));
+const TablePage = lazy(() => import("~/page/Table/Index"));
+const BlogPage = lazy(() => import("~/page/Blog/Index"));
+const LockPage = lazy(() => import("~/page/Lock/Index"));
 
 const router = createBrowserRouter([
   {
@@ -27,15 +31,15 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Dashboard />,
+        element: <DashboardPage />,
       },
       {
         path: "/chart",
-        element: <Chart />,
+        element: <ChartPage />,
       },
       {
         path: "/profile",
-        element: <Profile />,
+        element: <ProfilePage />,
         children: [
           {
             path: ":tabValue",
@@ -45,11 +49,28 @@ const router = createBrowserRouter([
       },
       {
         path: "/table",
-        element: <Table />,
+        element: <TablePage />,
       },
       {
         path: "/card",
-        element: <Card />,
+        element: <CardPage />,
+      },
+      {
+        path: "/blog",
+        children: [
+          {
+            index: true,
+            element: <BlogPage />,
+          },
+          {
+            path: "create",
+            element: <CreateBlogPage />,
+          },
+          {
+            path: ":slug",
+            element: <EditBlogPage />,
+          },
+        ],
       },
       // {
       //   path: '*',
@@ -57,14 +78,15 @@ const router = createBrowserRouter([
       // },
     ],
   },
-  { path: "/login", element: <Login />, errorElement: <Error /> },
+  { path: "/login", element: <LoginPage />, errorElement: <Error /> },
   {
     path: "/forget-password",
-    element: <ForgetPassword />,
+    element: <ForgetPasswordPage />,
     errorElement: <Error />,
   },
   // { path: '/register', element: <Register /> },
-  { path: "*", element: <NotFound />, errorElement: <Error /> },
+  { path: "/lock", element: <LockPage />, errorElement: <Error /> },
+  { path: "*", element: <NotFoundPage />, errorElement: <Error /> },
 ]);
 
 const ProviderRouter = () => {

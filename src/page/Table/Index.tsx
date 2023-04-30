@@ -6,7 +6,7 @@ import { StickyHeaderTable } from "~/components/table/StickeyHeader";
 import { UserRoleTable } from "~/components/table/UserRole";
 import CustomBreadcrumb from "~/components/widget/CustomBreadcrumb";
 
-const Table = () => {
+const TablePage = () => {
   const { t } = useTranslation();
 
   return (
@@ -250,4 +250,4 @@ const Table = () => {
   );
 };
 
-export default Table;
+export default TablePage;

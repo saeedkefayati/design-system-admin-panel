@@ -1,6 +1,8 @@
 import { ReactNode } from "react";
 import {
   IoBarChartOutline,
+  IoCreateOutline,
+  IoDocumentTextOutline,
   IoFileTrayOutline,
   IoGridOutline,
   IoKeyOutline,
@@ -58,6 +60,18 @@ const MenuItem: MenuItemProps = [
     key: "card",
     link: "/card",
     icon: <IoFileTrayOutline size={20} />,
+  },
+  {
+    id: 7,
+    key: "blog",
+    link: "/blog",
+    icon: <IoDocumentTextOutline size={20} />,
+  },
+  {
+    id: 7,
+    key: "blog-add",
+    link: "/blog/create",
+    icon: <IoCreateOutline size={20} />,
   },
 ];
 

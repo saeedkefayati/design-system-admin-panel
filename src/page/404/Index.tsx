@@ -4,12 +4,12 @@ import {
   createStyles,
   SimpleGrid,
   Text,
-  Title
+  Title,
 } from "@mantine/core";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import ImageNotFound from "../../components/illustration/ImageNotFound";
+import ImageNotFound from "~/components/illustration/ImageNotFound";
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -36,7 +36,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-const NotFound = () => {
+const NotFoundPage = () => {
   const { classes } = useStyles();
   const { t } = useTranslation();
 
@@ -72,4 +72,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default NotFoundPage;

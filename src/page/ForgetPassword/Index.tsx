@@ -9,16 +9,34 @@ import {
   TextInput,
   Title,
 } from "@mantine/core";
+import { useForm, zodResolver } from "@mantine/form";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
+import { ResetPassword } from "~/schema/User";
 import { getTokenStorage } from "~/util/storage";
 
 const useStyles = createStyles((theme) => ({
+  wrapper: {
+    position: "relative",
+    minHeight: "100vh",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  background: {
+    position: "absolute",
+    inset: 0,
+    backgroundSize: "cover",
+    backgroundImage: "url(/src/asset/login.avif)",
+    filter: "blur(10px) opacity(0.85)",
+    zIndex: -1,
+  },
+
   title: {
     fontSize: rem(26),
     fontWeight: 900,
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
   },
 
   controls: {
@@ -35,42 +53,54 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-const ForgetPassword = () => {
-  const { classes } = useStyles();
-  const navigate = useNavigate();
+const ForgetPasswordPage = () => {
   const token = getTokenStorage();
+  const navigate = useNavigate();
   const { t } = useTranslation();
+  const { classes } = useStyles();
+
+  const form = useForm({
+    validate: zodResolver(ResetPassword),
+    initialValues: {
+      email: "",
+    },
+  });
 
   if (token) navigate("/");
 
   return (
-    <>
+    <div className={classes.wrapper}>
       <Helmet title={String(t("seo.forget-password"))} />
-      <Container size={460} my={30}>
-        <Title className={classes.title} align="center">
-          {t("forget-password.title")}
-        </Title>
-        <Text c="dimmed" fz="sm" ta="center">
+      <Container w={450} py={60}>
+        <Title className={classes.title}>{t("forget-password.title")}</Title>
+        <Text c="dimmed" fz="sm">
           {t("forget-password.sub-title")}
         </Text>
         <Paper withBorder shadow="md" p={30} radius="md" mt="xl">
-          <TextInput
-            label={t("forget-password.email")}
-            placeholder="hello@gmail.com"
-            required
-          />
-          <Group position="apart" mt="lg" className={classes.controls}>
-            <Link to="/login" className={classes.control}>
-              {t("forget-password.back")}
-            </Link>
-            <Button className={classes.control}>
-              {t("forget-password.reset-password")}
-            </Button>
-          </Group>
+          <form
+            onSubmit={form.onSubmit((values) => {
+              console.log(values);
+            })}
+          >
+            <TextInput
+              label={t("forget-password.email")}
+              placeholder="hello@gmail.com"
+              {...form.getInputProps("email")}
+            />
+            <Group position="apart" mt="lg" className={classes.controls}>
+              <Link to="/login" className={classes.control}>
+                {t("forget-password.back")}
+              </Link>
+              <Button type="submit" className={classes.control}>
+                {t("forget-password.reset-password")}
+              </Button>
+            </Group>
+          </form>
         </Paper>
       </Container>
-    </>
+      <div className={classes.background} />
+    </div>
   );
 };
 
-export default ForgetPassword;
+export default ForgetPasswordPage;

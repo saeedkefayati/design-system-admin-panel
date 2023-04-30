@@ -6,7 +6,7 @@ import { CardProfile } from "~/components/widget/CardProfile";
 import CustomBreadcrumb from "~/components/widget/CustomBreadcrumb";
 import { UseTest } from "~/hook/UseTest";
 
-const Profile = () => {
+const ProfilePage = () => {
   const { t } = useTranslation();
   const { isLoading } = UseTest();
 
@@ -51,4 +51,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default ProfilePage;

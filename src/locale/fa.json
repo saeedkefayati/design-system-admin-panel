@@ -6,10 +6,14 @@
     "error": "مشکلی به وجود آمده!",
     "forget-password": "فراموشی رمز عبور",
     "login": "ورود",
+    "lock": "قفل",
     "chart": "چارت",
     "table": "جدول",
     "card": "کارت",
-    "profile": "صفحه کاربری"
+    "profile": "صفحه کاربری",
+    "blog": "مقالات",
+    "blog-add": "نوشتن مقاله",
+    "blog-edit": "ویرایش مقاله"
   },
   "login": {
     "title": "سلامت نیوز",
@@ -17,7 +21,9 @@
     "password": "رمز عبور شما",
     "forget-password": "رمز عبور خود را فراموش کردید؟",
     "submit": "ورود",
-    "language": "زبان خود را انتخاب کنید"
+    "language": "زبان خود را انتخاب کنید",
+    "email-error": "آدرس ایمیل وارد شده معتبر نیست.",
+    "password-error": "رمز عبور کوتاه است، حداقل 6 و حداکثر 12 کاراکتر وارد کنید."
   },
   "forget-password": {
     "title": "رمز عبور خود را فراموش کردید؟",
@@ -25,6 +31,11 @@
     "email": "آدرس ایمیل",
     "reset-password": "تغییر رمز عبور",
     "back": "رفتن به صفحه ورود"
+  },
+  "lock": {
+    "title": "حساب قفل شد",
+    "sub-title": "سلام {{name}} برای واردشدن رمزعبورت را مجدد وارد کن!",
+    "submit": "ورود دوباره"
   },
   "home": {
     "title": "خانه",
@@ -77,6 +88,41 @@
   "card": {
     "title": "کارت"
   },
+  "blog": {
+    "title": "مقالات"
+  },
+  "add-blog": {
+    "title": "نوشتن مقاله",
+    "post-title": "عنوان",
+    "post-title-description": "عنوان مقاله",
+    "post-description": "توضیحات",
+    "post-description-description": "توضیحات مقاله",
+    "post-slug": "آدرس",
+    "post-slug-description": "آدرس مقاله",
+    "post-image": "عکس",
+    "post-image-description": "عکس اصلی مقاله",
+    "post-content": "محتوا",
+    "post-content-description": "محتوا مقاله",
+    "post-content-placeholder": "محتوا را وارد کنید...",
+    "post-category": "دسته بندی",
+    "post-category-description": "دسته بندی مقاله"
+  },
+  "edit-blog": {
+    "title": "ویرایش مقاله",
+    "post-title": "عنوان",
+    "post-title-description": "عنوان مقاله",
+    "post-description": "توضیحات",
+    "post-description-description": "توضیحات مقاله",
+    "post-slug": "آدرس",
+    "post-slug-description": "آدرس مقاله",
+    "post-image": "عکس",
+    "post-image-description": "عکس اصلی مقاله",
+    "post-content": "محتوا",
+    "post-content-description": "محتوا مقاله",
+    "post-content-placeholder": "محتوا را وارد کنید...",
+    "post-category": "دسته بندی",
+    "post-category-description": "دسته بندی مقاله"
+  },
   "menu": {
     "dashboard": "داشبورد",
     "login": "صفحه ورود",
@@ -85,7 +131,9 @@
     "chart": "چارت",
     "table": "جدول",
     "card": "کارت",
-    "profile": "صفحه کاربری"
+    "profile": "صفحه کاربری",
+    "blog": "مقالات",
+    "blog-add": "نوشتن مقاله"
   },
   "recommended": "توصیه شده",
   "error": {
@@ -99,5 +147,13 @@
     "title": {
       "edit-role": "ویرایش نقش"
     }
+  },
+  "form": {
+    "required": "این فیلد اجباری است.",
+    "empty": "این فیلدد خالی است."
+  },
+  "filter": {
+    "asc": "صعودی",
+    "desc": "نزولی"
   }
 }

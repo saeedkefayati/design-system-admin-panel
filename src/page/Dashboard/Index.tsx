@@ -2,16 +2,16 @@ import { Grid, Skeleton, Space } from "@mantine/core";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import MapChart from "~/components/map/MapChart";
 import { CardStats } from "~/components/widget/CardStats";
 import CheckDevice from "~/components/widget/CheckDevice";
 import CustomBreadcrumb from "~/components/widget/CustomBreadcrumb";
-import MapChart from "~/components/map/MapChart";
 import ProgressCard from "~/components/widget/ProgressCard";
 import Stat from "~/components/widget/Stat";
 import StatsRingProgress from "~/components/widget/StatsRingProgress";
 import { UseTest } from "~/hook/UseTest";
 
-const Dashboard = () => {
+const DashboardPage = () => {
   const { isLoading } = UseTest();
   const { t } = useTranslation();
 
@@ -101,4 +101,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default DashboardPage;

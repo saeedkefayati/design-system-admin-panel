@@ -11,7 +11,7 @@ import VerticalBar from "~/components/chart/VerticalBar";
 import CustomBreadcrumb from "~/components/widget/CustomBreadcrumb";
 import { UseTest } from "~/hook/UseTest";
 
-const Chart = () => {
+const ChartPage = () => {
   const { t } = useTranslation();
   const { isLoading } = UseTest();
 
@@ -57,4 +57,4 @@ const Chart = () => {
   );
 };
 
-export default Chart;
+export default ChartPage;

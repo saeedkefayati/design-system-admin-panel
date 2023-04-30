@@ -1,20 +1,16 @@
 import {
   Button,
   createStyles,
-  Divider,
   Paper,
   PasswordInput,
   rem,
-  TextInput,
   Title,
 } from "@mantine/core";
 import { useForm, zodResolver } from "@mantine/form";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
-import { Link, useNavigate } from "react-router-dom";
-import SelectLanguage from "~/components/shared/SelectLanguage";
-import { UseLogin } from "~/hook/UseLogin";
-import { Login } from "~/schema/User";
+import { useNavigate } from "react-router-dom";
+import { LockScreen } from "~/schema/User";
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -28,7 +24,7 @@ const useStyles = createStyles((theme) => ({
       theme.colorScheme === "dark" ? theme.colors.dark[7] : theme.colors.gray[3]
     }`,
     minHeight: "100vh",
-    maxWidth: rem(450),
+    maxWidth: rem(550),
     paddingTop: rem(80),
 
     [theme.fn.smallerThan("sm")]: {
@@ -42,46 +38,34 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-const LoginPage = () => {
+const LockPage = () => {
   const { classes } = useStyles();
-  const { mutate: login, isSuccess, isError } = UseLogin();
-  const navigate = useNavigate();
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const form = useForm({
-    validate: zodResolver(Login),
+    validate: zodResolver(LockScreen),
     initialValues: {
-      email: "",
       password: "",
     },
   });
 
   return (
     <>
-      <Helmet title={String(t("seo.login"))} />
+      <Helmet title={String(t("seo.lock"))} />
       <form
         className={classes.wrapper}
         onSubmit={form.onSubmit((values) => {
-          login(values);
+          console.log(values);
         })}
       >
         <Paper className={classes.form} radius={0} p={30}>
-          <Title
-            order={2}
-            className={classes.title}
-            ta="center"
-            mt="md"
-            mb={50}
-          >
-            {t("login.title")}
+          <Title order={2} className={classes.title} mt="md" mb={50}>
+            {t("lock.title")}
           </Title>
-          <TextInput
-            label={t("login.email")}
-            placeholder="hello@gmail.com"
-            {...form.getInputProps("email")}
-            size="md"
-            withAsterisk
-          />
+          <Title order={5}>
+            {t("lock.sub-title", { name: "saeedkefayati" })}
+          </Title>
           <PasswordInput
             label={t("login.password")}
             placeholder="Your password"
@@ -91,23 +75,12 @@ const LoginPage = () => {
             withAsterisk
           />
           <Button type="submit" fullWidth mt="xl" size="md">
-            {t("login.submit")}
+            {t("lock.submit")}
           </Button>
-          <Button
-            component={Link}
-            to="/forget-password"
-            variant="outline"
-            fullWidth
-            mt="md"
-            mb="md"
-          >
-            {t("login.forget-password")}
-          </Button>
-          <Divider my="xl" label={<SelectLanguage />} labelPosition="center" />
         </Paper>
       </form>
     </>
   );
 };
 
-export default LoginPage;
+export default LockPage;
