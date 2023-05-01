@@ -11,7 +11,6 @@ const Layout = () => {
 
   return (
     <>
-      <Idle />
       <AppShell
         styles={{
           main: {
@@ -29,6 +28,7 @@ const Layout = () => {
           <Outlet />
         </Container>
       </AppShell>
+      {import.meta.env.PROD && <Idle />}
     </>
   );
 };
