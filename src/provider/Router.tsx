@@ -4,8 +4,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SalamtNewsLogo from "~/components/core/SalamtNewsLogo";
 import Layout from "~/layout/Layout";
 import NotFoundPage from "~/page/404/Index";
-import CreateBlogPage from "~/page/Blog/Create";
-import EditBlogPage from "~/page/Blog/Edit";
 import Error from "~/page/Error/Error";
 
 const CardPage = lazy(() => import("~/page/Card/Index"));
@@ -18,6 +16,8 @@ const TabProfile = lazy(() => import("~/page/Profile/Tabs/Index"));
 const TablePage = lazy(() => import("~/page/Table/Index"));
 const BlogPage = lazy(() => import("~/page/Blog/Index"));
 const LockPage = lazy(() => import("~/page/Lock/Index"));
+const CreateBlogPage = lazy(() => import("~/page/Blog/Create"));
+const EditBlogPage = lazy(() => import("~/page/Blog/Edit"));
 
 const router = createBrowserRouter([
   {

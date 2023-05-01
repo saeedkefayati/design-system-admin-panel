@@ -10,7 +10,8 @@ import { useForm, zodResolver } from "@mantine/form";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import { LockScreen } from "~/schema/User";
+import { LockScreenSchema } from "~/schema/User";
+import { LockScreenInput } from "~/types/form";
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -43,8 +44,8 @@ const LockPage = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  const form = useForm({
-    validate: zodResolver(LockScreen),
+  const form = useForm<LockScreenInput>({
+    validate: zodResolver(LockScreenSchema),
     initialValues: {
       password: "",
     },

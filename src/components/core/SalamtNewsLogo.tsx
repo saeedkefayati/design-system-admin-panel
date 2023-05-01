@@ -5,7 +5,7 @@ const SalamtNewsLogo = () => {
   const dark = theme.colorScheme === "dark";
 
   return (
-    <svg width={100} viewBox="0 0 130 57">
+    <svg width={80} viewBox="0 0 130 57" aria-label="salamat news logo">
       <g fill="none" fillRule="evenodd">
         <g fill={dark ? theme.white : theme.primaryColor}>
           <g>

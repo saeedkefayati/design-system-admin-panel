@@ -10,10 +10,12 @@ const Blog = z.object({
   category: z.string().min(1, { message: t("form.required") ?? "" }),
 });
 
-export const AddBlog = Blog.extend({
+const AddBlogSchema = Blog.extend({
   createdAt: z.date(),
 });
 
-export const EditBlog = Blog.extend({
+const EditBlogSchema = Blog.extend({
   editedAt: z.date(),
 });
+
+export { AddBlogSchema, EditBlogSchema };

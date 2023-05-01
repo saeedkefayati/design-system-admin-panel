@@ -9,13 +9,14 @@ import {
 } from "react-icons/io5";
 import { UsePostTest } from "~/hook/UseTest";
 import { ProfileInformationSchema } from "~/schema/Profile";
+import { ProfileInformationInput } from "~/types/form";
 
 const ProfileSection = () => {
   const id = useId();
   const { isLoading, mutate } = UsePostTest();
   const { t } = useTranslation();
 
-  const form = useForm({
+  const form = useForm<ProfileInformationInput>({
     validate: zodResolver(ProfileInformationSchema),
     initialValues: {
       username: "saeedkefayati",

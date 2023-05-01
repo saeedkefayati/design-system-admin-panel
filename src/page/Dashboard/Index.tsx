@@ -92,8 +92,6 @@ const DashboardPage = () => {
         <Grid.Col sm={6}>
           <Skeleton visible={isLoading} h="100%">
             <MapChart latitude={32} longitude={53} country="IRAN" />
-            {/* <MapChart latitude={33} longitude={44} />
-            <MapChart latitude={42.83} longitude={12.83} /> */}
           </Skeleton>
         </Grid.Col>
       </Grid>

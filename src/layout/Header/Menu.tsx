@@ -17,7 +17,7 @@ const MenuHeader = () => {
           color={theme.primaryColor}
           style={{ cursor: "pointer" }}
         >
-          JD
+          <IoPersonCircleOutline />
         </Avatar>
       </Menu.Target>
       <Menu.Dropdown>

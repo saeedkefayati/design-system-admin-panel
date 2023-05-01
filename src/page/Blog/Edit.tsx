@@ -18,15 +18,16 @@ import CustomBreadcrumb from "~/components/widget/CustomBreadcrumb";
 import RichTextEditor from "~/components/widget/RichTextEditor";
 import { IMAGE_ACCEPT_ATTR } from "~/constant/constant";
 import { UsePostTest } from "~/hook/UseTest";
-import { EditBlog } from "~/schema/Blog";
+import { EditBlogSchema } from "~/schema/Blog";
+import { EditBlogInput } from "~/types/form";
 
 const EditBlogPage = () => {
   const { slug } = useParams();
   const { t } = useTranslation();
   const { mutate, isLoading, isSuccess } = UsePostTest();
 
-  const form = useForm({
-    validate: zodResolver(EditBlog),
+  const form = useForm<EditBlogInput>({
+    validate: zodResolver(EditBlogSchema),
     initialValues: {
       title: "Norway Fjord Adventures",
       description:

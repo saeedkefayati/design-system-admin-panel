@@ -13,7 +13,8 @@ import { useForm, zodResolver } from "@mantine/form";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
-import { ResetPassword } from "~/schema/User";
+import { ResetPasswordSchema } from "~/schema/User";
+import { ResetPasswordInput } from "~/types/form";
 import { getTokenStorage } from "~/util/storage";
 
 const useStyles = createStyles((theme) => ({
@@ -59,8 +60,8 @@ const ForgetPasswordPage = () => {
   const { t } = useTranslation();
   const { classes } = useStyles();
 
-  const form = useForm({
-    validate: zodResolver(ResetPassword),
+  const form = useForm<ResetPasswordInput>({
+    validate: zodResolver(ResetPasswordSchema),
     initialValues: {
       email: "",
     },

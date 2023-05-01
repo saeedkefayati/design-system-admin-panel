@@ -17,14 +17,15 @@ import CustomBreadcrumb from "~/components/widget/CustomBreadcrumb";
 import RichTextEditor from "~/components/widget/RichTextEditor";
 import { IMAGE_ACCEPT_ATTR } from "~/constant/constant";
 import { UsePostTest } from "~/hook/UseTest";
-import { AddBlog } from "~/schema/Blog";
+import { AddBlogSchema } from "~/schema/Blog";
+import { AddBlogInput } from "~/types/form";
 
 const CreateBlogPage = () => {
   const { t } = useTranslation();
   const { mutate, isLoading, isSuccess } = UsePostTest();
 
-  const form = useForm({
-    validate: zodResolver(AddBlog),
+  const form = useForm<AddBlogInput>({
+    validate: zodResolver(AddBlogSchema),
     initialValues: {
       title: "",
       description: "",

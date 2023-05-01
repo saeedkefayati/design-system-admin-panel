@@ -14,7 +14,8 @@ import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
 import SelectLanguage from "~/components/shared/SelectLanguage";
 import { UseLogin } from "~/hook/UseLogin";
-import { Login } from "~/schema/User";
+import { LoginSchema } from "~/schema/User";
+import { LoginInput } from "~/types/form";
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -48,8 +49,8 @@ const LoginPage = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
-  const form = useForm({
-    validate: zodResolver(Login),
+  const form = useForm<LoginInput>({
+    validate: zodResolver(LoginSchema),
     initialValues: {
       email: "",
       password: "",

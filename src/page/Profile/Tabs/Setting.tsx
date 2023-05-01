@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { IoLockClosedOutline } from "react-icons/io5";
 import { UsePostTest } from "~/hook/UseTest";
 import { ProfilePasswordSchema } from "~/schema/Profile";
+import { ProfilePasswordInput } from "~/types/form";
 
 const SettingSection = () => {
   const id = useId();
@@ -13,7 +14,7 @@ const SettingSection = () => {
   const { t } = useTranslation();
   const [visible, { toggle }] = useDisclosure();
 
-  const form = useForm({
+  const form = useForm<ProfilePasswordInput>({
     validate: zodResolver(ProfilePasswordSchema),
     initialValues: {
       password: "pass",
