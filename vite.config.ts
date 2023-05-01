@@ -8,6 +8,11 @@ export default defineConfig({
   define: {
     global: "window",
   },
+  build: {
+    minify: true,
+    assetsDir: "assets",
+    manifest: true,
+  },
   plugins: [react()],
   resolve: {
     alias: {
