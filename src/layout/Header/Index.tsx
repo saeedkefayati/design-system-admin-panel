@@ -33,7 +33,7 @@ const HeaderLayout = ({ theme, opened, setOpened }: HeaderProps) => {
   const dark = theme.colorScheme === "dark";
 
   return (
-    <Header height={{ base: 70 }} p="lg">
+    <Header height={{ base: 70 }} p="lg" zIndex={101}>
       <Flex align="center" h="100%">
         <MediaQuery largerThan="md" styles={{ display: "none" }}>
           <Burger

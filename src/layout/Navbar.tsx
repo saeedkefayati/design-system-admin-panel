@@ -27,6 +27,7 @@ const NavbarLayout = ({ hidden }: NavbarLayoutProps) => {
       hiddenBreakpoint="md"
       hidden={hidden}
       width={{ sm: 300, lg: 300 }}
+      zIndex={101}
     >
       <Navbar.Section grow component={ScrollArea} mx="-xs" px="xs">
         <SimpleGrid cols={1} verticalSpacing="xs" spacing="xs">
