@@ -6,7 +6,6 @@ import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { TbRefresh, TbSortAscending, TbSortDescending } from "react-icons/tb";
 import { Link, useNavigate } from "react-router-dom";
-import { MantineTableIcon } from "~/constant/MantineTableIcon";
 import { UseUsers } from "~/hook/UseUser";
 import { useSettingContext } from "~/provider/Context";
 import { BlogUser } from "~/types/api";
@@ -50,7 +49,6 @@ const MantineTable = () => {
   return (
     <>
       <MantineReactTable
-        icons={MantineTableIcon}
         localization={dir === "rtl" ? MRT_Localization_FA : MRT_Localization_EN}
         // mantineTableProps={{ withColumnBorders: true }}
         mantinePaperProps={{ radius: "md", shadow: "none" }}
