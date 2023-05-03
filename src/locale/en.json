@@ -155,5 +155,8 @@
   "filter": {
     "asc": "Ascending",
     "desc": "Descending"
+  },
+  "api": {
+    "failed": "Failed To Fetch"
   }
 }
