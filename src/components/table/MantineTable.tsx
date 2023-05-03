@@ -120,7 +120,7 @@ const MantineTable = () => {
                   <TbSortDescending />
                 </ActionIcon>
               ) : (
-                <ActionIcon onClick={() => setSorting("asc")}>
+                <ActionIcon size="lg" onClick={() => setSorting("asc")}>
                   <TbSortAscending />
                 </ActionIcon>
               )}
