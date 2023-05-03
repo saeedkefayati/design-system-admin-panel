@@ -35,8 +35,12 @@ const MantineTable = () => {
         header: "Last Name",
       },
       {
-        accessorKey: "address.city",
-        header: "City",
+        accessorKey: "username",
+        header: "User Name",
+      },
+      {
+        accessorKey: "email",
+        header: "Email",
       },
       {
         accessorKey: "address.street",
@@ -71,14 +75,18 @@ const MantineTable = () => {
         enableRowActions
         renderRowActions={({ row }) => (
           <Button
+            variant="light"
+            color="orange"
             key={row.id}
             component={Link}
             to={`/blog/${row.original.username}`}
+            compact
           >
             {t("edit-blog.title")}
           </Button>
         )}
-        positionActionsColumn="last"
+        // positionActionsColumn="last"
+        // enableRowNumbers
         data={data ?? []}
         initialState={{ showGlobalFilter: true }}
         enableFilters={false}
@@ -87,7 +95,6 @@ const MantineTable = () => {
         enableFullScreenToggle={false}
         enableSorting={false}
         // enableHiding={false}
-        enableRowNumbers
         enableColumnOrdering
         // enablePinning
         // enableStickyHeader
