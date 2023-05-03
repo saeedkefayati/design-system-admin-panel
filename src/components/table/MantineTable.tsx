@@ -74,7 +74,8 @@ const MantineTable = () => {
         renderRowActions={({ row }) => (
           <Button
             key={row.id}
-            onClick={() => navigate(`/blog/${row.original.username}`)}
+            component={Link}
+            to={`/blog/${row.original.username}`}
           >
             {t("edit-blog.title")}
           </Button>
